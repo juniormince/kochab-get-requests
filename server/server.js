@@ -26,7 +26,7 @@ app.listen(PORT, () => {
 
 //TO DOOOOOO
 // [x] make button -INDEX.HTML
-// [] make button click - CLIENT.JS
-// [] button returns random quote in console log -CLIENT.JS
+// [x] make button click - CLIENT.JS
+// [x] button returns random quote in console log -CLIENT.JS
 // [] button returns a random quote IN THE DOM -CLIENT.JS
 
