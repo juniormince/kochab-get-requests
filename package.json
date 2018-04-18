@@ -1,0 +1,23 @@
+{
+  "name": "kochab-get-requests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juniormince/kochab-get-requests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juniormince/kochab-get-requests/issues"
+  },
+  "homepage": "https://github.com/juniormince/kochab-get-requests#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
