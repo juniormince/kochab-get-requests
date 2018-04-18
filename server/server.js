@@ -12,6 +12,10 @@ app.use(express.static('server/public')); //connects servers to public files (pu
 // });
 
 app.get('/all-quotes', (req, res) => {
+    res.send(quotes_data);
+});
+
+app.get('/quotes', (req, res) => { // !! add a quotes module
     const randomNumber = Math.floor(Math.random() * quotes_data.length);
     res.send(quotes_data[randomNumber]);
 });
@@ -19,3 +23,10 @@ app.get('/all-quotes', (req, res) => {
 app.listen(PORT, () => {
     console.log(`listening on port: ${PORT}`);
 });
+
+//TO DOOOOOO
+// [x] make button -INDEX.HTML
+// [] make button click - CLIENT.JS
+// [] button returns random quote in console log -CLIENT.JS
+// [] button returns a random quote IN THE DOM -CLIENT.JS
+
