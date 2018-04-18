@@ -28,5 +28,7 @@ app.listen(PORT, () => {
 // [x] make button -INDEX.HTML
 // [x] make button click - CLIENT.JS
 // [x] button returns random quote in console log -CLIENT.JS
-// [] button returns a random quote IN THE DOM -CLIENT.JS
+// [x] button returns a random quote IN THE DOM -CLIENT.JS
+
+// [] make array properties show up on DOM
 
