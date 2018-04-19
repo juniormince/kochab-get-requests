@@ -4,6 +4,7 @@ $(document).ready(onReady);
 
 function onReady() {
     console.log('jquery czechhhh');
+
     $.ajax({
         type: 'GET',
         url: '/quotes'
@@ -12,11 +13,41 @@ function onReady() {
             $('#randomQuote').text(response.quote);
         });
     allQuotes();
-    onClick();
+    onRandomClick(); //rename randomClick
+}
+
+function onRandomClick() { //rename randomClick
+    $('#randomButton').on('click', clickHandler); //randomClickHandler
+}
+
+function clickHandler() { //rename randomClickHandler
+    console.log('free click czech');
+    $.ajax({
+        type: 'GET',
+        url: '/quotes'
+    })
+        .then(function (response) {
+            $('#randomQuote').text(response.quote);
+            // console.log(response);
+        });
+}
+
+
+function newQuote ()    {
+    //new quote on click
+    //$('#newQuoteButton').on('click', newQuoteHandler function);
+}
+
+
+
+
+function getAllQuotes() {
+    //move GET request here (all-quotes)
+    console.log('getAllQuotes czech');
 }
 
 function allQuotes()    {
-    console.log('allquotes???');
+    console.log('allquotes czech');
     $.ajax({
         type: 'GET',
         url: '/all-quotes'
@@ -27,27 +58,3 @@ function allQuotes()    {
             }
         });
 }
-
-function onClick() {
-    $('#randomButton').on('click', clickHandler);
-}
-
-function clickHandler() {
-    console.log('free click czech');
-    $.ajax({
-        type: 'GET',
-        url: '/quotes'
-    })
-        .then(function (response) {
-            $('#randomQuote').text(response.quote);
-            // console.log(response);
-        });
-    // $.ajax({
-    //     type: 'GET',
-    //     url: '/all-quotes'
-    // })
-    // .then(function(response)    {
-    //     console.log(response);
-    // });
-}
-
