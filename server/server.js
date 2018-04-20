@@ -14,6 +14,8 @@ app.get('/all-quotes', (req, res) => {
 
 app.post('/add-quote', (req, res) =>{
     console.log(req.body);
+    quotes_data.push(req.body); //gonna pUSH'em
+    res.sendStatus(200);
 })
 
 app.get('/quotes', (req, res) => { // !! add a quotes module
@@ -22,6 +24,6 @@ app.get('/quotes', (req, res) => { // !! add a quotes module
 });
 
 app.listen(PORT, () => {
-    console.log(`listening on port: ${PORT}`);
+    console.log(`listening on port: ${PORT}`); //hey!! listen!! 
 });
 
