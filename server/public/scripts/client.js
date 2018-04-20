@@ -13,14 +13,15 @@ function onReady() {
             $('#randomQuote').text(response.quote);
         });
     allQuotes();
-    onRandomClick(); //rename randomClick
+    onRandomClick();
+    onNewClick();
 }
 
-function onRandomClick() { //rename randomClick
-    $('#randomButton').on('click', clickHandler); //randomClickHandler
+function onRandomClick() { 
+    $('#randomButton').on('click', randomClickHandler);
 }
 
-function clickHandler() { //rename randomClickHandler
+function randomClickHandler() {
     console.log('free click czech');
     $.ajax({
         type: 'GET',
@@ -32,14 +33,21 @@ function clickHandler() { //rename randomClickHandler
         });
 }
 
-
-function newQuote ()    {
-    //new quote on click
-    //$('#newQuoteButton').on('click', newQuoteHandler function);
+function onNewClick()   {
+    $('#newQuoteButton').on('click', newQuote);
 }
 
 
-
+function newQuote ()    {
+    console.log('new free czech');
+    const addQuote = {
+        title: $('#newQuote').val(),
+        author: $('#newAuthor').val()
+    }
+    console.log('new quote object', addQuote);
+    //new quote POST request
+    //push to quote array
+}
 
 function getAllQuotes() {
     //move GET request here (all-quotes)
